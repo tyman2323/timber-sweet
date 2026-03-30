@@ -19,4 +19,17 @@ offset_right = 652.0
 offset_bottom = 335.0
 text = "Tactical Intercept"
 
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 404.0
+offset_right = 885.0
+offset_bottom = 513.0
+text = "Go to this link to view repository, make your own branches, and submit issues
+
+https://github.com/tyman2323/timber-sweet/issues
+
+https://tyman2323.github.io/timber-sweet/"
+editable = false
+
 [connection signal="pressed" from="ti" to="." method="_on_ti_pressed"]
