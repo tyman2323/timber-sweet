@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf7mg8iyj88da"]
+
+[ext_resource type="Script" path="res://scripts/radarsymbo.cs" id="1_q48bt"]
+
+[node name="radarsymbo" type="Node2D"]
+script = ExtResource("1_q48bt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="altitude" type="Label" parent="Sprite2D"]
+offset_left = 456.0
+offset_top = 261.0
+offset_right = 496.0
+offset_bottom = 284.0
+text = "220"

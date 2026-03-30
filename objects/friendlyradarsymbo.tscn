@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://i6yepkvcq6bt"]
+
+[ext_resource type="Script" uid="uid://b1tvqlpcpaxn7" path="res://scripts/friendlyradarsymbo.gd" id="1_2arju"]
+[ext_resource type="Texture2D" uid="uid://hgf6m5qnwkd5" path="res://assets/sprites/5xVMJ58-removebg-preview-removebg-preview-blue-symbo.png" id="1_ybr0a"]
+
+[node name="friendlyradarsymbo" type="Node2D"]
+script = ExtResource("1_2arju")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.462264, 0.545455)
+texture = ExtResource("1_ybr0a")
+
+[node name="altitude" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 16.0
+offset_right = 21.0
+offset_bottom = 39.0
+text = "alt"
+
+[node name="callsign" type="Label" parent="."]
+offset_left = -22.0
+offset_top = -24.0
+offset_right = 36.0
+offset_bottom = -1.0
+theme_override_font_sizes/font_size = 13
+text = "callsign
+"

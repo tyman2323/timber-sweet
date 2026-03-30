@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://7oker81o4s8o"]
+
+[ext_resource type="Script" uid="uid://dih0sv8v74olu" path="res://scripts/hostileradarsymbo.gd" id="1_oiw6b"]
+[ext_resource type="Texture2D" uid="uid://bxfucqiic2x2u" path="res://assets/sprites/radarsymbohost-removebg-preview.png" id="2_46dgb"]
+
+[node name="hostileradarsymbo" type="Node2D"]
+script = ExtResource("1_oiw6b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.198694, 0.287022)
+texture = ExtResource("2_46dgb")
+
+[node name="altitude" type="Label" parent="."]
+offset_left = -9.0
+offset_top = 14.0
+offset_right = 112.0
+offset_bottom = 106.0
+scale = Vector2(0.201596, 0.198453)
+theme_override_font_sizes/font_size = 67
+text = "alt"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.826
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://smo4mi8jsnvh"]
+
+[ext_resource type="Script" uid="uid://cqevbyepc60e8" path="res://scripts/gamecontroller.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://cu74qwjq0ufiq" path="res://scripts/Camera2D.gd" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://b33jumlmepbrd" path="res://objects/cursor.tscn" id="2_m8oal"]
+[ext_resource type="Texture2D" uid="uid://b6p5xjbu3iu10" path="res://assets/bullseye.png" id="4_iywne"]
+[ext_resource type="Script" uid="uid://c4wrq5bft6bue" path="res://scripts/voicestuff.gd" id="5_iywne"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_lbhrr")
+
+[node name="refresh" type="Timer" parent="."]
+wait_time = 8.042
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 321)
+script = ExtResource("1_lnu2h")
+
+[node name="Timer" type="Timer" parent="Camera2D"]
+wait_time = 3.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="cursor" parent="CanvasLayer" instance=ExtResource("2_m8oal")]
+
+[node name="be" type="Sprite2D" parent="."]
+position = Vector2(342.9511, 303.34375)
+scale = Vector2(0.072567225, 0.064821444)
+texture = ExtResource("4_iywne")
+
+[node name="eventtemp" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="voicestuff" type="Node" parent="."]
+script = ExtResource("5_iywne")
+
+[node name="TextEdit" type="TextEdit" parent="voicestuff"]
+offset_left = 932.0
+offset_top = -438.0
+offset_right = 1382.0
+offset_bottom = -293.0
+text = "What you say will go here"
+
+[connection signal="timeout" from="refresh" to="." method="_on_refresh_timeout"]
+[connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="eventtemp" to="." method="_on_eventtemp_timeout"]
