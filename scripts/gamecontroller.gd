@@ -724,7 +724,7 @@ func qctargeting(shooter, tgtname):
 func knockitoff():
 	for x in range(friendlies_list.size()):
 		friendlies_list[x].knockitoff(x+1)
-	var title = load("res://scenes/titlescreen.tscn").instantiate()
-	get_tree().root.add_child(title)
-	get_tree().current_scene.queue_free()
+	#var title = load("res://scenes/titlescreen.tscn").instantiate()
+	#get_tree().root.add_child(title)
+	#get_tree().current_scene.queue_free()
 	pass

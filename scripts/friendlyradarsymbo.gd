@@ -125,8 +125,7 @@ func radiocheck(p_fltnum: int):
 
 func knockitoff(p_fltnum: int):
 	var kio: String = (str(p_fltnum)+ " knock it off") 
-	DisplayServer.tts_speak(str(p_fltnum), voice_id)
-	self.fltnum = p_fltnum
+	DisplayServer.tts_speak(kio, voice_id)
 
 func checkin(alphacheck: bool):
 	if alphacheck == true:
